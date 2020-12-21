@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: poetry install
       - name: Run tests
-        run: poetry run pytest
+        run: poetry run pytest --cov=./ --cov-report=xml
   code-quality:
     strategy:
       fail-fast: false
